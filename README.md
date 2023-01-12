@@ -15,8 +15,11 @@ multiqc .
 # assembly do novo transcriptome
 
 Trinity --seqType fq --single [trimmed_ourput_sample1]_1P.fastq.gz, [trimmed_ourput_samp1en]_1P.fastq.gz --CPU 8 --max_memory 20G --min_contig_length 150
+
 OR for paird end
+
 Trinity --seqType fq --left [trimmed_ourput_sample1]_1P.fastq.gz,[trimmed_ourput_samp1en]_1P.fastq.gz --right [trimmed_ourput_sample1]_2P.fastq.gz,[trimmed_ourput_samp1en]_2P.fastq.gz --CPU 8 --max_memory 20G --min_contig_length 150
+
 OR
 SPAdes
 
@@ -24,6 +27,7 @@ SPAdes
 # STAR alignment 
 
 STAR --runMode genomeGenerate --runThreadN 30 --genomeDir Trinity_index  --genomeFastaFiles Trinity.fasta --genomeSAindexNbases 10
+
 STAR --genomeDir Trinity_index --runThreadN 30 --readFilesIn [trimmed_ourput]_1P.fastq.gz [trimmed_ourput]_2P.fastq.gz --readFilesCommand zcat --quantMode GeneCounts --outFileNamePrefix [output_name].sorted.bam --outSAMtype BAM SortedByCoordinate
 
 
