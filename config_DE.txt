@@ -1,0 +1,6 @@
+condition1	17NQ004_P1_R11A
+condition1	17NQ004_P1_R11B
+condition1	17NQ004_P1_R11C
+condition2	17NQ004_P2_R5A
+condition2	17NQ004_P2_R5B
+condition2	17NQ004_P2_R5C
